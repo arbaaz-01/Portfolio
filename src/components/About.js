@@ -19,7 +19,7 @@ const About = () => {
             <div className="journey-paragraph">
               <p>
                 My journey in computer science has been marked by consistent academic excellence, having secured{" "}
-                <strong>1st position in five consecutive semesters</strong> during my B.Sc. IT. I've solved over 600 DSA
+                1st position in five consecutive semesters during my B.Sc. IT. I've solved over 600 DSA
                 problems and have practical experience in{" "}
                 <strong>Java Development, Full-Stack Development, Mobile App Development, and Machine Learning.</strong>
               </p>

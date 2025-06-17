@@ -36,11 +36,12 @@
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+  word-spacing: 0.2rem;
 }
 
 .about-text p {
-  font-size: 1.1rem;
-  line-height: 1;
+  font-size: 1.2rem;
+  line-height: 1.3;
   color: #334155;
   margin: 0;
   text-align: justify;
