@@ -10,7 +10,7 @@ const Projects = () => {
       link: "https://github.com/arbaaz-01/Kontest",
     },
     {
-      title: "Budegtly",
+      title: "Budgetly",
       description:
         "The Flutter Finance Tracker App offers an easy-to-use and visually clear platform to manage your financial transactions. It helps users track expenses, set budgets, and analyze spending. The app uses Firebase for secure authentication and real-time data storage, ensuring a smooth and reliable experience.",
       techStack: ["Flutter", "Dart", "Firebase"],
