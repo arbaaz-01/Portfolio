@@ -1,74 +1,222 @@
 .about {
-  padding: 5rem 0;
-  background: white;
+  padding: 6rem 0;
+  background: #fafbfc;
+}
+
+.about .section-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #1e293b;
+  position: relative;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.about .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
 }
 
 .about-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 5rem;
   align-items: start;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
 }
 
 .about-text p {
   font-size: 1.1rem;
-  line-height: 1.8;
-  color: #666;
-  margin-bottom: 1.5rem;
+  line-height: 1.;
+  color: #334155;
+  margin: 0;
+  text-align: justify;
+}
+
+.intro-paragraph p {
+  color: #334155;
+}
+
+.about-text strong {
+  color: #1e293b;
 }
 
 .about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
 
-.stat {
+.stat-card {
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
   text-align: center;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  border-radius: 15px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.stat:hover {
-  transform: translateY(-5px);
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
 }
 
-.stat h3 {
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:hover::before {
+  opacity: 0.15;
+}
+
+.stat-card.primary {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  border: 1px solid #c7d2fe;
+}
+
+.stat-card.primary::before {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stat-card.secondary {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 1px solid #e0f2fe;
+}
+
+.stat-card.secondary::before {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+}
+
+.stat-card.tertiary {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 1px solid #dcfce7;
+}
+
+.stat-card.tertiary::before {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+.stat-card.quaternary {
+  background: linear-gradient(135deg, #fefce8 0%, #fef3c7 100%);
+  border: 1px solid #fef3c7;
+}
+
+.stat-card.quaternary::before {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.stat-number {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #667eea;
+  font-weight: 800;
+  color: #1e293b;
   margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 
-.stat p {
-  color: #666;
-  font-weight: 500;
+.stat-label {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.02em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .about-stats {
-    flex-direction: row;
-    justify-content: space-around;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 0;
   }
 
-  .stat {
-    padding: 1.5rem;
+  .about .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
   }
 
-  .stat h3 {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-text {
+    gap: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .intro-paragraph p {
+    font-size: 1.1rem;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
     font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
+  .about .section-title {
+    font-size: 2rem;
+  }
+
   .about-stats {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
   }
 }
