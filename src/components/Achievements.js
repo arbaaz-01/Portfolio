@@ -9,9 +9,9 @@ const Achievements = () => {
   ]
 
   const codingProfiles = [
-    { name: "LeetCode", link: "#" },
-    { name: "HackerRank", link: "#" },
-    { name: "GeeksforGeeks", link: "#" },
+    { name: "LeetCode", link: "https://leetcode.com/u/arbaaz02/" },
+    { name: "HackerRank", link: "https://www.hackerrank.com/profile/shaikharbaaz2016" },
+    { name: "GeeksforGeeks", link: "https://www.geeksforgeeks.org/user/shaikharbaaz2016/" },
   ]
 
   return (

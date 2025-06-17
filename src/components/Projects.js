@@ -21,7 +21,7 @@ const Projects = () => {
       description:
         "Engineered a Crop Recommendation System, delivering 99.84% accuracy to empower Indian farmers with optimal crop selection, utilizing LightGBM and CatBoost stacking.",
       techStack: ["LightGBM", "CatBoost", "Streamlit"],
-      link: "#",
+      link: "https://github.com/arbaaz-01/Crop-Recommendation-Model",
     },
   ]
 
