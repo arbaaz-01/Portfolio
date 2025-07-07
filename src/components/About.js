@@ -36,7 +36,7 @@ const About = () => {
 
           <div className="about-stats">
             <div className="stat-card primary">
-              <div className="stat-number">9.86</div>
+              <div className="stat-number">9.68</div>
               <div className="stat-label">Current CGPA</div>
             </div>
             <div className="stat-card secondary">

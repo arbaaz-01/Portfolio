@@ -7,7 +7,7 @@ const Education = () => {
       institution: "Sardar Patel Institute of Technology",
       location: "Mumbai",
       duration: "Aug 2024 - Present",
-      cgpa: "9.86",
+      cgpa: "9.68",
     },
     {
       degree: "B.Sc. Information Technology",

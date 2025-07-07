@@ -26,6 +26,33 @@
   color: #667eea;
   margin-bottom: 1.5rem;
   font-weight: 500;
+  min-height: 2rem;
+}
+
+.typewriter-container {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.typewriter-text {
+  color: #667eea;
+  font-weight: 500;
+}
+
+.cursor {
+  color: #667eea;
+  font-weight: 300;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
 }
 
 .hero-text p {
@@ -138,6 +165,10 @@
     font-size: 1.3rem;
   }
 
+  .typewriter-container {
+    justify-content: center;
+  }
+
   .profile-placeholder {
     max-width: 250px;
   }
@@ -146,6 +177,10 @@
 @media (max-width: 480px) {
   .hero-text h1 {
     font-size: 2rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.1rem;
   }
 
   .hero-buttons {

@@ -1,9 +1,49 @@
 "use client"
+import { useState, useEffect } from "react"
 import "./Hero.css"
 import myPhoto from "../assets/profile_pic.jpg"
 
-
 const Hero = () => {
+  const [currentSkill, setCurrentSkill] = useState(0)
+  const [displayText, setDisplayText] = useState("")
+  const [isTyping, setIsTyping] = useState(true)
+
+  const skills = [
+    "Final Year MCA Student",
+    "Java Developer",
+    "Problem Solver",
+    "Full Stack Developer",
+    "Android Developer",
+    "Machine Learning Enthusiast"
+  ]
+
+  useEffect(() => {
+    const currentSkillText = skills[currentSkill]
+    
+    if (isTyping) {
+      if (displayText.length < currentSkillText.length) {
+        const timeout = setTimeout(() => {
+          setDisplayText(currentSkillText.slice(0, displayText.length + 1))
+        }, 85)
+        return () => clearTimeout(timeout)
+      } else {
+        const timeout = setTimeout(() => {
+          setIsTyping(false)
+        }, 1500)
+        return () => clearTimeout(timeout)
+      }
+    } else {
+      if (displayText.length > 0) {
+        const timeout = setTimeout(() => {
+          setDisplayText(displayText.slice(0, -1))
+        }, 50)
+        return () => clearTimeout(timeout)
+      } else {
+        setCurrentSkill((prev) => (prev + 1) % skills.length)
+        setIsTyping(true)
+      }
+    }
+  }, [displayText, isTyping, currentSkill, skills])
 
   const handleResumeView = () => {
     window.open("/resume/Resume.pdf", "_blank")
@@ -15,7 +55,10 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1>Arbaz Ali Shaikh</h1>
-            <h2>Final Year MCA Student</h2>
+            <h2 className="typewriter-container">
+              <span className="typewriter-text">{displayText}</span>
+              <span className="cursor">|</span>
+            </h2>
             <p>
               Passionate about Software Development, Problem-Solving, and creating innovative solutions. Currently
               pursuing Master of Computer Applications with a strong foundation in Java Development

@@ -4,7 +4,7 @@ const Achievements = () => {
   const achievements = [
     "Secured 1st position in Five consecutive semesters of B.Sc. IT",
     "Solved 600+ DSA problems and earned multiple badges",
-    "Maintained excellent academic performance with CGPA 9.86 in MCA",
+    "Maintained excellent academic performance with CGPA  in MCA",
     "Successfully completed internship at 73bit Limited",
   ]
 
