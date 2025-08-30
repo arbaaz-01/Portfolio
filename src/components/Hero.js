@@ -46,7 +46,7 @@ const Hero = () => {
   }, [displayText, isTyping, currentSkill, skills])
 
   const handleResumeView = () => {
-    window.open("/resume/Resume.pdf", "_blank")
+    window.open("/resume/Resume_Arbaz.pdf", "_blank")
   }
 
   return (
